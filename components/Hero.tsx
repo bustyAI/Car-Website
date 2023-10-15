@@ -6,7 +6,7 @@ const Hero = () => {
     const handleScroll = () => {
 
     }
-    return(
+    return (
         <div className="hero">
             <div className="flex-1 pt-36 padding-x">
                 <h1 className="hero__title">
@@ -17,11 +17,11 @@ const Hero = () => {
                     Booking a car never has never been this easy.
                 </p>
                 {/* Custom button with props */}
-                <CustomButton 
-                title="Explore"
-                buttonStyles="bg-primary-blue
+                <CustomButton
+                    title="Explore"
+                    buttonStyles="bg-primary-blue
                 text-white rounded-full mt-10"
-                handleClick={handleScroll}
+                    handleClick={handleScroll}
                 />
             </div>
         </div>
