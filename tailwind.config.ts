@@ -27,6 +27,9 @@ module.exports = {
       backgroundImage: {
         'pattern': "url('/pattern.png')",
         'hero-bg': "url('/hero-bg.png')"
+      },
+      borderRadius: {
+        'custom1' : '89% 11% 47% 53% / 51% 50% 50% 49% '
       }
     },
   },
