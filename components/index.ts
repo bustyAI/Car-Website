@@ -2,11 +2,15 @@
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Footer from "./Footer";
+import SearchBar from "./SearchBar";
+import CustomFilter from "./CustomFilter";
 import CustomButton from "./CustomButton";
 
 export {
     Hero,
     CustomButton,
     Navbar,
+    SearchBar,
+    CustomFilter,
     Footer
 }
