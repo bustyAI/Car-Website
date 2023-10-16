@@ -12,3 +12,8 @@ export interface CustomButtonProps {
  export interface CustomFilterProps {
     title:string;
  }
+
+ export interface SearchManufactuerProps {
+    manufactuer:string;
+    searchManufactuer:(manufactuer:string) => void;
+ }
