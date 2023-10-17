@@ -15,7 +15,7 @@ const SearchManufactuer = ({ manufactuer, searchManufactuer }: SearchManufactuer
         item.toLowerCase().replace(/\s+/g, "").includes(query.toLowerCase().replace(/\s+/g, ""))
     ))
     return (
-        <div className='search-manufacturer'>Search Manufactuer
+        <div className='search-manufacturer'>
             <Combobox value={manufactuer} onChange={searchManufactuer}>
                 <div className='relative w-full'>
                     <Combobox.Button className="absolute top-[14px]">
