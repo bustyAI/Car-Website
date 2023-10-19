@@ -1,16 +1,9 @@
 import { Hero, CustomFilter, SearchBar, CarCard } from '@/components'
 import { getCars } from '@/utilities'
-import { FilterProps } from '@/types';
 
 
-export default async function Home({ searchParams }) {
-  const cars = await getCars({
-    manufactuer:searchParams.manufactuer || "",
-    year: searchParams.year || 2021,
-    fuel:searchParams.fuel || "",
-    limit:searchParams.limit || 5,
-    model:searchParams.model || "",
-  });
+export default async function Home() {
+  const cars = await getCars();
   const noData = !Array.isArray(cars) || cars.length < 1 || !cars;
 
   return (

@@ -29,7 +29,6 @@ const SearchBar = () => {
     if (manufactuer === "" && model === "") {
       return alert("Please fill in search bar");
     }
-    
     updateSearchParams(model.toLowerCase(), manufactuer.toLowerCase());
 
   }
