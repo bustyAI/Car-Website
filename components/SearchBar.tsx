@@ -27,10 +27,10 @@ const SearchBar = () => {
     e.preventDefault();
 
     if (manufactuer === "" && model === "") {
-      return alert("Please fill in search bar");
+      return(alert("Please fill in search bar"));
     }
-    
-    updateSearchParams(model.toLowerCase(), manufactuer.toLowerCase());
+
+    updateSearchParams(model.toLowerCase(), manufactuer.toLowerCase())
 
   }
 
@@ -39,20 +39,18 @@ const SearchBar = () => {
 
     if (model) {
       searchParams.set("model", model);
-    }
-    else {
-      searchParams.delete("model");
+    } else {
+      searchParams.delete('model');
     }
 
     if (manufactuer) {
-      searchParams.set("manufacturer", manufactuer);
-    }
-    else {
-      searchParams.delete('manufacturer');
+      searchParams.set('manufactuer', manufactuer);
+    } else {
+      searchParams.delete('manufactuer');
     }
     const newPath = `${window.location.pathname}?${searchParams.toString()}`
 
-    router.push(newPath)
+    router.push(newPath);
   }
 
 

@@ -3,13 +3,13 @@ import { getCars } from '@/utilities'
 import { FilterProps } from '@/types';
 
 
-export default async function Home({ searchParams }) {
+export default async function Home({searchParams}) {
   const cars = await getCars({
-    manufactuer:searchParams.manufactuer || "",
+    manufactuer:searchParams.manufactuer || "NOt REAL",
     year: searchParams.year || 2021,
-    fuel:searchParams.fuel || "",
-    limit:searchParams.limit || 5,
-    model:searchParams.model || "",
+    fuel: searchParams.fuel || "",
+    limit: searchParams.limit || 5,
+    model: searchParams.model || "",
   });
   const noData = !Array.isArray(cars) || cars.length < 1 || !cars;
 
