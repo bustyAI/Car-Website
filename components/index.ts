@@ -9,6 +9,7 @@ import CustomButton from "./CustomButton";
 import SearchManufactuer from "./SearchManufactuer";
 import CarCard from "./CarCard";
 import CarDetails from "./CarDetails";
+import ShowMore from "./ShowMore";
 
 export {
     Hero,
@@ -19,5 +20,6 @@ export {
     SearchManufactuer,
     CarCard,
     CarDetails,
+    ShowMore,
     Footer
 }

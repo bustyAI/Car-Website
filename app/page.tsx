@@ -1,15 +1,16 @@
-import { Hero, CustomFilter, SearchBar, CarCard } from '@/components'
+import { Hero, CustomFilter, SearchBar, CarCard, ShowMore } from '@/components'
 import { getCars } from '@/utilities'
 import { FilterProps } from '@/types';
 import { fuels, yearsOfProduction } from '@/constants';
 
+
 // passing search parameters to url
 export default async function Home({searchParams}) {
   const cars = await getCars({
-    manufactuer:searchParams.manufactuer || "NOt REAL",
+    manufactuer:searchParams.manufactuer || "",
     year: searchParams.year || 2021,
     fuel: searchParams.fuel || "",
-    limit: searchParams.limit || 5,
+    limit: searchParams.limit || 10,
     model: searchParams.model || "",
   });
   const noData = !Array.isArray(cars) || cars.length < 1 || !cars;
@@ -37,6 +38,10 @@ export default async function Home({searchParams}) {
                 <CarCard car={car} />
               ))}
             </div>
+            <ShowMore
+            pageNumber ={(searchParams.pageNumber || 10) / 10}
+            isNext={(searchParams.limit || 10) > cars.length}
+            />
           </section>
         ) : (
           <div className='home__error-container'>
@@ -44,6 +49,8 @@ export default async function Home({searchParams}) {
             <p>{cars?.message}</p>
           </div>
         )}
+
+
 
       </div>
     </main>
