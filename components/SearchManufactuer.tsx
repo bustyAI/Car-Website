@@ -11,6 +11,7 @@ import { useState, Fragment } from 'react'
 const SearchManufactuer = ({ manufactuer, searchManufactuer }: SearchManufactuerProps) => {
     const [query, setQuery] = useState("");
 
+    // Filters manufacturers when typing letter
     const filteredManufacturers = query === "" ? manufacturers : manufacturers.filter((item) => (
         item.toLowerCase().replace(/\s+/g, "").includes(query.toLowerCase().replace(/\s+/g, ""))
     ))

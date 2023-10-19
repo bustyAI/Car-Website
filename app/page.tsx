@@ -1,8 +1,9 @@
 import { Hero, CustomFilter, SearchBar, CarCard } from '@/components'
 import { getCars } from '@/utilities'
 import { FilterProps } from '@/types';
+import { fuels, yearsOfProduction } from '@/constants';
 
-
+// passing search parameters to url
 export default async function Home({searchParams}) {
   const cars = await getCars({
     manufactuer:searchParams.manufactuer || "NOt REAL",
@@ -24,8 +25,8 @@ export default async function Home({searchParams}) {
         <div className='home__filters'>
           <SearchBar />
           <div className='home__filter-container'>
-            <CustomFilter title="fuel" />
-            <CustomFilter title="year" />
+            <CustomFilter title="fuel" options={fuels} />
+            <CustomFilter title="year" options={yearsOfProduction}/>
           </div>
         </div>
 

@@ -7,6 +7,7 @@ export async function getCars(filters: FilterProps) {
         'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     }
 
+    // generating URL
     const url = new URL('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars');
     url.searchParams.append('make', manufactuer);
     url.searchParams.append('year', `${year}`);
