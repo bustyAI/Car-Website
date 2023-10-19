@@ -36,3 +36,10 @@ export interface CarProps {
    year: number;
 }
 
+export interface FilterProps {
+   manufactuer: string;
+   year:  number;
+   fuel: string;
+   limit: number;
+   model: string;
+}
