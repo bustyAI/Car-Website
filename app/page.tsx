@@ -1,6 +1,5 @@
 import { Hero, CustomFilter, SearchBar, CarCard, ShowMore } from '@/components'
 import { getCars } from '@/utilities'
-import { FilterProps } from '@/types';
 import { fuels, yearsOfProduction } from '@/constants';
 
 
